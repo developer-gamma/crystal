@@ -67,7 +67,7 @@ jobs:
       - run: |
           git clone https://github.com/crystal-lang/distribution-scripts.git ~/distribution-scripts
           cd ~/distribution-scripts
-          git checkout 4d0e3169857ce40a84c2ba8269c56c3cb78f882e
+          git checkout 50f064e90f893934a494a65b33dc7e85b678653a
       # persist relevant information for build process
       - run: |
           cd ~/distribution-scripts
@@ -167,7 +167,7 @@ jobs:
           cd /tmp/workspace/distribution-scripts
           source build.env
           cd linux
-          make release=true
+          make all64 release=true
       - persist_to_workspace:
           root: /tmp/workspace/distribution-scripts/linux/
           paths:
